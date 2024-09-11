@@ -1,0 +1,18 @@
+parm system_hmass.top
+
+
+trajin md*.nc 1 20000
+
+autoimage anchor :1-668,1338
+rms first @N,C,CA
+strip :WAT,Na+,Cl-
+trajout protein.xtc
+go
+
+clear all
+parm system_hmass.top
+parmstrip :WAT,Na+,Cl-
+
+parmwrite out protein.top
+go
+quit   

@@ -1,0 +1,5 @@
+parm ../protein.top
+trajin ../protein2.xtc 1 60000 1200
+strip :WAT,Na+,Cl-,Mg+
+nativecontacts !@H* distance 5.0 writecontacts contacts.out contactpdb contacts.pdb series seriesout contacts.series savenonnative seriesnnout contacts.nonnative.series
+run

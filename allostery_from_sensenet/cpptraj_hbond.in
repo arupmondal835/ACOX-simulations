@@ -1,0 +1,4 @@
+parm ../protein.top
+trajin ../protein2.xtc 1 60000 1200
+hbond !(:WAT,Na+,Cl-,Mg+) dist 3.5 angle 135 avgout hbonds.out series uuseries hbonds.series
+run

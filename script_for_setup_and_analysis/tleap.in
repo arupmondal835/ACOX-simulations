@@ -1,0 +1,12 @@
+source leaprc.protein.ff19SB
+source leaprc.gaff
+source leaprc.water.opc
+aa= loadpdb ../apo_2A.pdb
+check aa
+solvatebox aa OPCBOX 10.0
+
+addions aa Na+ 0
+addions aa Cl- 0
+saveamberparm aa system_water.top system_water.mdcrd
+savepdb aa system_water.pdb
+quit
